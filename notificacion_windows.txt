@@ -1,0 +1,12 @@
+from winotify import Notification,audio
+
+toast = Notification(
+    app_id="TEST",
+    title="Test Title",
+    msg="Olis",
+    duration="short"
+)
+
+toast.add_actions(label="Click Me", launch="https://www.youtube.com/watch?v=5EHEG4gMCNs")
+
+toast.show()

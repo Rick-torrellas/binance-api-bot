@@ -1,0 +1,21 @@
+import pystray
+import PIL.Image
+
+image = PIL.Image.open("icon.png")
+
+def on_clicket(icon, item):
+    print("Hello World")
+
+def exit(icon):
+    print("Exit aplication")
+    icon.stop()
+
+icon = pystray.Icon("Neural",image, menu=pystray.Menu(
+    pystray.MenuItem("Say Hello",on_clicket),
+    pystray.MenuItem("Exit",exit),
+    pystray.MenuItem("SubMenu",pystray.Menu(
+        pystray.MenuItem("SubItem",on_clicket)
+    ))
+))
+
+icon.run()
