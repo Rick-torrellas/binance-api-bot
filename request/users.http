@@ -1,0 +1,47 @@
+@url = http://localhost:8000
+@users = {{url}}/generate
+### Get All
+Get {{users}}
+
+### Get One
+# @prompt id
+GET {{users}}/{{id}}
+
+### Crear usuario
+POST {{users}}
+Content-Type: application/json
+
+{
+  "id": "string",
+  "event_type": "string",
+  "event_time": "asd",
+  "symbol": "dasda",
+  "kline_interval": "dasd",
+  "kline_first_trade_id": "dasd",
+  "kline_last_trade_id": "dasd",
+  "kline_open_price": "dasd",
+  "kline_close_price": "dasd",
+  "kline_high_price": "dasd",
+  "kline_low_price": "dasd",
+  "kline_base_asset_volume": "dasd",
+  "kline_number_of_trades": "dasd",
+  "kline_close": "dasd",
+  "kline_quote_asset_volume": "dasd",
+  "kline_taker_buy_base_asset_volume": "dasd",
+  "kline_taker_buy_quote_asset_volume": "dasd"
+}
+
+### Delete user
+# @prompt id
+DELETE {{users}}/{{id}}
+
+### Edit One
+# @prompt id
+PUT {{users}}/{{id}}
+Content-Type: application/json
+
+{
+  "name": "TEST:baby",
+  "email": "Olis",
+  "password": "paco"
+}

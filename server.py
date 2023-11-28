@@ -3,7 +3,7 @@ from routes.root import root
 
 app = FastAPI(
     title="API Binnace Alerts",
-    version="v0.1.0"
+    version="v0.2.0"
 )
 
 app.include_router(root)
